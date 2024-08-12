@@ -387,6 +387,14 @@ export default function Example() {
         </div>
 
       </main>
+      
+      <div className="w-full mx-auto flex items-center justify-center mt-[60px] mb-[60px]">
+        <Link href={"https://karensastudio.com"} className="text-xs text-black flex items-center justify-center">
+          <span>طراحی و توسعه</span>
+          <Logo className={'h-3 mr-1'} />
+        </Link>
+      </div>
+
     </div>
   )
 }

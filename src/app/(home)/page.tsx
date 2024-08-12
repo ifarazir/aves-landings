@@ -10,6 +10,7 @@ import { IconlyTelegram } from '../icons/Iconly-Telegram-Icon'
 import { PhoneIcon } from '@heroicons/react/24/outline'
 import { IconlyCall } from '../icons/Iconly-Call-Icon'
 import { useRouter } from 'next/navigation'
+import { Logo } from '../karensa-logo'
 
 const navigation = [
     { name: 'Lady\'s Day', href: '/ladies' },
@@ -32,7 +33,7 @@ const posts = [
         id: 2,
         title: 'Kids Orienteering',
         href: '/kids',
-        image: './images/kids/IMG_5094.jpg',
+        image: './images/kids/IMG_5111.jpg',
         description:
             'مجموعه‌ای از بازی ھا و فعالیت ھا با ھدف نقشه‌خوانی و استفاده از قطب‌نما در محیط طبیعی و روبازِ طراحی شده',
         date: 'برنامه یک روزه',
@@ -42,7 +43,7 @@ const posts = [
         id: 3,
         title: 'کمپ ساحلی جزیره لاوان',
         href: '/lavan',
-        image: './images/lavan/IMG_1924.jpg',
+        image: './images/lavan/IMG_1964.jpg',
         description:
             '۳ شب و ۲  روز کمپ ساحلی و چادرمانی در جزیره لاوان به همراه تمامی وعده‌های غذایی',
         date: '۲ شب و ۳ روز',
@@ -255,6 +256,13 @@ export default function Page() {
                         ))}
                     </div>
                 </div>
+            </div>
+
+            <div className="w-full mx-auto flex items-center justify-center mb-[60px]">
+                <Link href={"https://karensastudio.com"} className="text-xs text-black flex items-center justify-center">
+                    <span>طراحی و توسعه</span>
+                    <Logo className={'h-3 mr-1'} />
+                </Link>
             </div>
 
         </main>
