@@ -20,6 +20,15 @@ export default function Home() {
 
         <div className="max-w-4xl w-full mx-auto mb-10 flex flex-col-reverse md:flex-row items-center justify-center gap-10">
           <div className="w-full">
+            <Link href="/" className="-m-1.5 p-1.5">
+              <span className="sr-only">آوِس</span>
+              <img
+                alt=""
+                src="./images/logo.png"
+                className="h-14 mb-5 w-auto mx-auto"
+              />
+            </Link>
+
             <div className="mx-auto w-fit bg-[#FF47ED1A] rounded-[8px] px-3 py-[10px] text-[#FF47ED] flex items-center justify-center gap-1 mb-5">
               <span className="text-[16px] font-medium leading-[20.8px]">
                 یک روز به خودت برس

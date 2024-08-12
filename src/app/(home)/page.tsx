@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { Dialog, DialogPanel } from '@headlessui/react'
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import { Bars3Icon, ChevronLeftIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import Link from 'next/link'
 import { IconlyInstagram } from '../icons/Iconly-Instagram-Icon'
 import { IconlyWhatsapp } from '../icons/Iconly-Whatsapp-Icon'
@@ -32,7 +32,7 @@ const posts = [
         id: 2,
         title: 'Kids Orienteering',
         href: '/kids',
-        image: './images/IMG_6279-min.jpg',
+        image: './images/kids/IMG_5094.jpg',
         description:
             'مجموعه‌ای از بازی ھا و فعالیت ھا با ھدف نقشه‌خوانی و استفاده از قطب‌نما در محیط طبیعی و روبازِ طراحی شده',
         date: 'برنامه یک روزه',
@@ -60,7 +60,7 @@ export default function Page() {
                 <header className="absolute inset-x-0 top-0 z-50">
                     <nav aria-label="Global" className="flex items-center justify-between p-6 lg:px-8">
                         <div className="flex lg:flex-1">
-                            <a href="#" className="-m-1.5 p-1.5">
+                            <a href="/" className="-m-1.5 p-1.5">
                                 <span className="sr-only">آوِس</span>
                                 <img
                                     alt=""
@@ -244,6 +244,13 @@ export default function Page() {
                                     </h3>
                                     <p className="mt-5 line-clamp-3 text-sm leading-6 text-gray-600">{post.description}</p>
                                 </div>
+                                <Link className='mt-5' href={post.href}>
+                                    <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-500 ring-1 ring-gray-900/10 flex items-center justify-center gap-2 hover:bg-orange-100 hover:ring-orange-500/20 hover:text-orange-600 transition-all">
+                                        اطلاعات بیشتر
+
+                                        <ChevronLeftIcon className='w-4 h-4' />
+                                    </div>
+                                </Link>
                             </article>
                         ))}
                     </div>
