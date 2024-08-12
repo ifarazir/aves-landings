@@ -11,7 +11,7 @@ import { PhoneIcon } from '@heroicons/react/24/outline'
 import { IconlyCall } from '../icons/Iconly-Call-Icon'
 import { useRouter } from 'next/navigation'
 
-export const navigation = [
+const navigation = [
     { name: 'Lady\'s Day', href: '/ladies' },
     { name: 'Kids Orienteering', href: '/kids' },
     { name: 'کمپ ساحلی جزیره لاوان', href: '/lavan' },

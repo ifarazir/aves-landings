@@ -27,7 +27,12 @@ import { IconlyColdDrink } from "../icons/Iconly-Cold-Drink-Icon";
 import { IconlyApple } from "../icons/Iconly-Apple-Icon";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { navigation } from "../(home)/page";
+
+const navigation = [
+  { name: 'Lady\'s Day', href: '/ladies' },
+  { name: 'Kids Orienteering', href: '/kids' },
+  { name: 'کمپ ساحلی جزیره لاوان', href: '/lavan' },
+]
 
 const stats = [
   { id: 1, name: <>۵ تا ۸ سال<br /> ۸ تا ۱۲ سال</>, value: 'رده سنی' },
@@ -190,14 +195,6 @@ export default function Example() {
             <div className="mx-auto max-w-7xl px-6 pb-32 pt-36 sm:pt-60 lg:px-8 lg:pt-32">
               <div className="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
                 <div className="relative w-full max-w-xl lg:shrink-0 xl:max-w-2xl">
-                  <Link href="/" className="-m-1.5 p-1.5">
-                    <span className="sr-only">آوِس</span>
-                    <img
-                      alt=""
-                      src="./images/logo.png"
-                      className="h-14 mb-10 w-auto invert"
-                    />
-                  </Link>
 
                   <div className="hidden sm:mb-10 sm:flex">
                     <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-500 ring-1 ring-gray-900/10 hover:ring-gray-900/20">

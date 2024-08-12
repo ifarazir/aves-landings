@@ -27,7 +27,16 @@ import { IconlyColdDrink } from "../icons/Iconly-Cold-Drink-Icon";
 import { IconlyApple } from "../icons/Iconly-Apple-Icon";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { navigation } from "../(home)/page";
+import { IconlyBurger } from "../icons/Iconly-Burger-Icon";
+import { IconlyMeat } from "../icons/Iconly-Meat-Icon";
+import { IconlyPizza } from "../icons/Iconly-Pizza-Icon";
+import { IconlySoap } from "../icons/Iconly-Soap-Icon";
+
+const navigation = [
+  { name: 'Lady\'s Day', href: '/ladies' },
+  { name: 'Kids Orienteering', href: '/kids' },
+  { name: 'کمپ ساحلی جزیره لاوان', href: '/lavan' },
+]
 
 const stats = [
   { id: 1, name: <>۵ تا ۸ سال<br /> ۸ تا ۱۲ سال</>, value: 'رده سنی' },
@@ -36,25 +45,20 @@ const stats = [
 
 const features = [
   {
-    name: 'جهت‌یابی',
-    description:
-      'یادگیری جهت یابی در حین بازی با استفاده از قطب نما',
-    icon: Iconlyexplore1,
+    name: '۲ وعده صبحانه',
+    icon: IconlyBurger,
   },
   {
-    name: 'نقشه‌خوانی',
-    description: 'یادگیری اصول اولیه‌ی نقشه‌خوانی',
-    icon: IconlyLocation,
+    name: '۲ وعده ناهار',
+    icon: IconlyMeat,
   },
   {
-    name: 'کمپینگ',
-    description: 'آموزش چادر زدن و گره',
-    icon: Iconlycamp2,
+    name: '۲ وعده شام',
+    icon: IconlyPizza,
   },
   {
-    name: 'کارگاه‌ها',
-    description: 'کارگاه نقاشی و مجسمه سازی بعد از طی کردن مراحل',
-    icon: IconlyPaintingpalette,
+    name: '۲ میز عصرانه',
+    icon: IconlySoap,
   },
 ]
 
@@ -190,38 +194,15 @@ export default function Page() {
             <div className="mx-auto max-w-7xl px-6 pb-32 pt-36 sm:pt-60 lg:px-8 lg:pt-32">
               <div className="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
                 <div className="relative w-full max-w-xl lg:shrink-0 xl:max-w-2xl">
-                  <Link href="/" className="-m-1.5 p-1.5">
-                    <span className="sr-only">آوِس</span>
-                    <img
-                      alt=""
-                      src="./images/logo.png"
-                      className="h-14 mb-10 w-auto invert"
-                    />
-                  </Link>
-
-                  <div className="hidden sm:mb-10 sm:flex">
-                    <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-500 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
-                      مرحله ی اول برنامه ی اُرینتیرینگ کودکان همراه خانواده
-                    </div>
-                  </div>
 
                   <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-                    Kids orienteering
+                    کمپ ساحلی جزیره لاوان
                   </h1>
                   <p className="mt-6 text-lg leading-8 text-gray-600 sm:max-w-md lg:max-w-none">
-                    مجموعه ای از بازی ها و فعالیت ها با هدف نقشه خوانی و استفاده از قطب نما در محیط طبیعی و رو باز طراحی شده
+                    ۳ شب و دو روز کمپ ساحلی و چادرمانی در جزیره لاوان به همراه تمامی وعده‌های غذایی
                   </p>
 
-                  <dl className="mt-16 grid max-w-xl grid-cols-1 gap-8 sm:mt-20 sm:grid-cols-2 xl:mt-16 mb-10">
-                    {stats.map((stat) => (
-                      <div key={stat.id} className="flex flex-col gap-y-3 border-r border-gray-900/10 pr-6">
-                        <dt className="text-sm leading-6 text-gray-600">{stat.name}</dt>
-                        <dd className="order-first text-3xl font-semibold tracking-tight text-gray-900">{stat.value}</dd>
-                      </div>
-                    ))}
-                  </dl>
-
-                  <Link href={"https://wa.me/+989903718447"} className="w-fit py-3 px-4 bg-[#0EA64B] rounded-xl flex items-center justify-between gap-x-[10px]">
+                  <Link href={"https://wa.me/+989903718447"} className="mt-10 w-fit py-3 px-4 bg-[#0EA64B] rounded-xl flex items-center justify-between gap-x-[10px]">
                     <WhatsappIcon className="w-[32px] h-[32px]" />
                     <div className="flex flex-col justify-center items-start gap-y-1">
                       <p className="text-[16px] leading-[20.8px] text-white font-black" dir="ltr">۰۹۹۰ ۳۷۱ ۸۴۴۷</p>
@@ -237,7 +218,7 @@ export default function Page() {
                     <div className="relative">
                       <img
                         alt=""
-                        src="./images/lavan/IMG_4980.jpg"
+                        src="./images/lavan/IMG_1924.jpg"
                         className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
                       />
                       <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
@@ -247,7 +228,7 @@ export default function Page() {
                     <div className="relative">
                       <img
                         alt=""
-                        src="./images/kids/IMG_5234.jpg"
+                        src="./images/lavan/IMG_1925.jpg"
                         className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
                       />
                       <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
@@ -255,7 +236,7 @@ export default function Page() {
                     <div className="relative">
                       <img
                         alt=""
-                        src="./images/kids/IMG_5111.jpg"
+                        src="./images/lavan/IMG_1973.jpg"
                         className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
                       />
                       <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
@@ -265,7 +246,7 @@ export default function Page() {
                     <div className="relative">
                       <img
                         alt=""
-                        src="./images/kids/IMG_5274.jpg"
+                        src="./images/lavan/IMG_1978.jpg"
                         className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
                       />
                       <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
@@ -273,7 +254,7 @@ export default function Page() {
                     <div className="relative">
                       <img
                         alt=""
-                        src="./images/kids/IMG_5275.jpg"
+                        src="./images/lavan/IMG_1981.jpg"
                         className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
                       />
                       <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
@@ -291,18 +272,14 @@ export default function Page() {
               <div className="px-6 lg:px-0 lg:pr-4 lg:pt-4">
                 <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-lg">
                   <h2 className="text-base font-semibold leading-7 text-orange-600">ویژگی‌های تور</h2>
-                  <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">یه سرمایه گذاری همه‌چی تموم</p>
-                  <p className="mt-6 text-lg leading-8 text-gray-600">
-                    در تمامی این مدت که کودکان در حال فعالیت و طی کردن مراحل هستند خانواده‌های عزیز میتونن در محیط دلپذیر معاشرت کنند و از آرامش محیط لذت ببرند
-                  </p>
+                  <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">همه وعده‌های غذایی با ما!</p>
                   <dl className="mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-600 lg:max-w-none">
                     {features.map((feature) => (
-                      <div key={feature.name} className="relative pr-9">
-                        <dt className="inline text-lg font-bold text-gray-900">
+                      <div key={feature.name} className="relative pr-10">
+                        <dt className="inline text-lg font-semibold text-gray-900">
                           <feature.icon aria-hidden="true" className="absolute right-1 h-7 w-7 text-orange-600" />
                           {feature.name}
                         </dt>{' '}
-                        <dd className="inline">{feature.description}</dd>
                       </div>
                     ))}
                   </dl>
@@ -335,7 +312,7 @@ export default function Page() {
           <div className="mx-auto max-w-2xl lg:text-center">
             <h2 className="text-base font-semibold leading-7 text-orange-600">یک روز به یاد ماندنی</h2>
             <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              پذیرایی شامل
+              دنیای تفریحات دریایی و ساحلی
             </p>
           </div>
           <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">

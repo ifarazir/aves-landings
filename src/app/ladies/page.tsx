@@ -18,8 +18,12 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { navigation } from "../(home)/page";
 
+const navigation = [
+  { name: 'Lady\'s Day', href: '/ladies' },
+  { name: 'Kids Orienteering', href: '/kids' },
+  { name: 'کمپ ساحلی جزیره لاوان', href: '/lavan' },
+]
 
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
