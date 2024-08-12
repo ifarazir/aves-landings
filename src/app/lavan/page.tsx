@@ -433,7 +433,7 @@ export default function Page() {
                     <span className="text-5xl font-bold  text-gray-900">۱۳،۸۰۰،۰۰۰</span>
                     <span className="text-sm font-semibold leading-6 tracking-wide text-gray-600">تومان</span>
                   </p>
-                  <p className="mt-4 text-sm text-gray-600">برای دو نفر (بدون احتساب هزینه چادر)</p>
+                  <p className="mt-4 text-sm text-gray-600">برای یک نفر (بدون احتساب هزینه چادر)</p>
 
                   <Link href={"https://wa.me/+989903718447"} className="mt-10 w-fit py-3 px-4 bg-[#0EA64B] rounded-xl flex items-center justify-between gap-x-[10px]">
                     <WhatsappIcon className="w-[32px] h-[32px]" />
