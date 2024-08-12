@@ -1,16 +1,15 @@
 "use client";
 
-import HeartRateIcon from "../icons/heart-rate";
 import WhatsappIcon from "../icons/whatsapp";
 import ChevronLeftCircleIcon from "../icons/chevron-left-circle";
 import { Logo } from "../karensa-logo";
 import Link from "next/link";
-import { LockClosedIcon, ServerIcon } from '@heroicons/react/20/solid'
 import { Dialog, DialogPanel } from '@headlessui/react'
 import { Bars3Icon, ChevronLeftIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import { IconlyInstagram } from '../icons/Iconly-Instagram-Icon'
 import { IconlyWhatsapp } from '../icons/Iconly-Whatsapp-Icon'
 import { IconlyTelegram } from '../icons/Iconly-Telegram-Icon'
+import { CheckIcon } from '@heroicons/react/20/solid'
 
 
 // Import Swiper React components
@@ -31,16 +30,12 @@ import { IconlyBurger } from "../icons/Iconly-Burger-Icon";
 import { IconlyMeat } from "../icons/Iconly-Meat-Icon";
 import { IconlyPizza } from "../icons/Iconly-Pizza-Icon";
 import { IconlySoap } from "../icons/Iconly-Soap-Icon";
+import clsx from "clsx";
 
 const navigation = [
   { name: 'Lady\'s Day', href: '/ladies' },
   { name: 'Kids Orienteering', href: '/kids' },
   { name: 'کمپ ساحلی جزیره لاوان', href: '/lavan' },
-]
-
-const stats = [
-  { id: 1, name: <>۵ تا ۸ سال<br /> ۸ تا ۱۲ سال</>, value: 'رده سنی' },
-  { id: 2, name: 'از ساعت ٢ ظهر تا ٨ عصر', value: 'برنامه یک روزه' },
 ]
 
 const features = [
@@ -62,18 +57,93 @@ const features = [
   },
 ]
 
-const featuresFood = [
+const featuresEntertainments = [
   {
-    name: 'میز ولکام',
+    name: 'پدل بورد',
     icon: IconlyCake,
   },
   {
-    name: 'بار سرد و گرم',
+    name: 'کایاک دو نفره',
     icon: IconlyColdDrink,
   },
   {
-    name: 'میز میوه',
+    name: 'اسنورکلینگ',
     icon: IconlyApple,
+  },
+  {
+    name: 'اسکله درایی',
+    icon: IconlyApple,
+  },
+  {
+    name: <>اسکوتر دریایی <span className="text-xs text-gray-500 block mt-1 font-normal">از قبل باید رزرو شود</span></>,
+    icon: IconlyApple,
+  },
+  {
+    name: 'سینما در ساحل',
+    icon: IconlyApple,
+  },
+  {
+    name: 'پلی‌استیشن',
+    icon: IconlyApple,
+  },
+  {
+    name: 'چادر دوش',
+    icon: IconlyApple,
+  },
+  {
+    name: <>چادر دستشویی <span className="text-xs text-gray-500 block mt-1 font-normal">به همراه شستشویی برقی و لوازم بهداشتی</span></>,
+    icon: IconlyApple,
+  },
+  {
+    name: 'تامین برق کمپ در طول روز',
+    icon: IconlyApple,
+  },
+  {
+    name: 'مبلمان بادی و دیزاین ساحل',
+    icon: IconlyApple,
+  },
+  {
+    name: 'والیبال ساحلی',
+    icon: IconlyApple,
+  },
+  {
+    name: 'واتر پلو',
+    icon: IconlyApple,
+  },
+  {
+    name: 'فوتبال ساحلی',
+    icon: IconlyApple,
+  },
+  {
+    name: 'لوازم بادی برای بازی ساحلی',
+    icon: IconlyApple,
+  },
+  {
+    name: 'ترنسفر های دریایی',
+    icon: IconlyApple,
+  },
+]
+
+const tiers = [
+  {
+    name: 'چادر VIP',
+    id: 'tour-vip',
+    priceMonthly: '۳،۲۰۰،۰۰۰',
+    features: [
+      'شامل چادر سرخپوستی سقف بلند',
+      'تشک بادی',
+      'بالشت بادی',
+      'کیسه خواب',
+      'و دیزاین شده',
+    ],
+    featured: true,
+  },
+  {
+    name: 'چادر معمولی',
+    id: 'tour-normal',
+    priceMonthly: '۱،۳۰۰،۰۰۰',
+    features: ['زیر انداز کیسه خواب', 'کیسه خواب', 'چادر کمپی',],
+    featured: false,
   },
 ]
 
@@ -195,7 +265,7 @@ export default function Page() {
               <div className="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
                 <div className="relative w-full max-w-xl lg:shrink-0 xl:max-w-2xl">
 
-                  <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+                  <h1 className="text-4xl font-bold  text-gray-900 sm:text-6xl">
                     کمپ ساحلی جزیره لاوان
                   </h1>
                   <p className="mt-6 text-lg leading-8 text-gray-600 sm:max-w-md lg:max-w-none">
@@ -210,7 +280,6 @@ export default function Page() {
                     </div>
                     <ChevronLeftCircleIcon className="w-[24px] h-[24px]" />
                   </Link>
-
 
                 </div>
                 <div className="mt-14 flex justify-end gap-8 sm:-mt-44 sm:justify-start sm:pr-20 lg:mt-0 lg:pl-0">
@@ -272,7 +341,7 @@ export default function Page() {
               <div className="px-6 lg:px-0 lg:pr-4 lg:pt-4">
                 <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-lg">
                   <h2 className="text-base font-semibold leading-7 text-orange-600">ویژگی‌های تور</h2>
-                  <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">همه وعده‌های غذایی با ما!</p>
+                  <p className="mt-2 text-3xl font-bold  text-gray-900 sm:text-4xl">همه وعده‌های غذایی با ما!</p>
                   <dl className="mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-600 lg:max-w-none">
                     {features.map((feature) => (
                       <div key={feature.name} className="relative pr-10">
@@ -294,7 +363,7 @@ export default function Page() {
                   <div className="mx-auto max-w-2xl sm:mx-0 sm:max-w-none">
                     <img
                       alt="Product screenshot"
-                      src="./images/kids/IMG_5163.jpg"
+                      src="./images/lavan/IMG_1964.jpg"
                       className="-mb-12 w-full aspect-square object-cover max-w-none rounded-tr-xl bg-gray-800 ring-1 ring-white/10"
                     />
                   </div>
@@ -308,17 +377,78 @@ export default function Page() {
           </div>
         </div>
 
+
+        <div className="relative isolate bg-white px-6 py-24 sm:py-32 lg:px-8">
+          <div aria-hidden="true" className="absolute inset-x-0 -top-3 -z-10 transform-gpu overflow-hidden px-36 blur-3xl">
+            <div
+              style={{
+                clipPath:
+                  'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
+              }}
+              className="mx-auto aspect-[1155/678] w-[72.1875rem] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30"
+            />
+          </div>
+          <div className="mx-auto max-w-2xl text-center lg:max-w-4xl">
+            <h2 className="text-base font-semibold leading-7 text-orange-600">هزینه‌ها</h2>
+            <p className="mt-2 text-4xl font-bold text-gray-900 sm:text-5xl">
+              سرمایه گذاری شما برای این سفر
+            </p>
+          </div>
+          <div className="mx-auto mt-16 grid max-w-lg grid-cols-1 items-center gap-y-6 sm:mt-20 sm:gap-y-0 lg:max-w-4xl lg:grid-cols-2">
+            {tiers.map((tier, tierIdx) => (
+              <div
+                key={tier.id}
+                className={clsx(
+                  tier.featured ? 'relative bg-white shadow-2xl' : 'bg-white/60 sm:mx-8 lg:mx-0',
+                  tier.featured
+                    ? ''
+                    : tierIdx === 0
+                      ? 'rounded-t-3xl sm:rounded-b-none lg:rounded-br-3xl lg:rounded-tl-none'
+                      : 'sm:rounded-t-none lg:rounded-br-none lg:rounded-tl-3xl',
+                  'rounded-3xl p-8 ring-1 ring-gray-900/10 sm:p-10',
+                )}
+              >
+                <h3 id={tier.id} className="text-base font-semibold leading-7 text-orange-600">
+                  {tier.name}
+                </h3>
+                <p className="mt-4 flex items-baseline gap-x-2">
+                  <span className="text-5xl font-bold text-gray-900">{tier.priceMonthly}</span>
+                  <span className="text-base text-gray-500">تومان / برای دو نفر</span>
+                </p>
+                <ul role="list" className="mt-8 space-y-3 text-sm leading-6 text-gray-600 sm:mt-10">
+                  {tier.features.map((feature) => (
+                    <li key={feature} className="flex gap-x-3">
+                      <CheckIcon aria-hidden="true" className="h-6 w-5 flex-none text-orange-600" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+
+                <Link href={"https://wa.me/+989903718447"} className="mt-10 w-full py-3 px-4 bg-[#0EA64B] rounded-xl flex items-center justify-between gap-x-[10px]">
+                  <WhatsappIcon className="w-[32px] h-[32px]" />
+                  <div className="flex flex-col justify-center items-start gap-y-1">
+                    <p className="text-[16px] leading-[20.8px] text-white font-black" dir="ltr">۰۹۹۰ ۳۷۱ ۸۴۴۷</p>
+                    <p className="text-[12px] leading-[15.6px] text-white">انتقال به واتس اپ | کلیک کنید</p>
+                  </div>
+                  <ChevronLeftCircleIcon className="w-[24px] h-[24px]" />
+                </Link>
+
+              </div>
+            ))}
+          </div>
+        </div>
+
         <div className="mx-auto max-w-7xl px-6 lg:px-8 py-12">
           <div className="mx-auto max-w-2xl lg:text-center">
             <h2 className="text-base font-semibold leading-7 text-orange-600">یک روز به یاد ماندنی</h2>
-            <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+            <p className="mt-2 text-3xl font-bold text-gray-900 sm:text-4xl">
               دنیای تفریحات دریایی و ساحلی
             </p>
           </div>
           <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
             <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
-              {featuresFood.map((feature) => (
-                <div key={feature.name} className="flex flex-col items-center justify-center">
+              {featuresEntertainments.map((feature) => (
+                <div key={feature.name} className="flex flex-col items-center justify-start">
                   <dt className="text-xl font-semibold leading-7 text-gray-900 text-center">
                     <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-lg bg-orange-600">
                       <feature.icon aria-hidden="true" className="h-8 w-8 text-white" />
@@ -329,40 +459,6 @@ export default function Page() {
               ))}
             </dl>
 
-          </div>
-        </div>
-
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto mt-16 max-w-2xl rounded-3xl ring-1 ring-gray-200 sm:mt-20 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
-            <div className="p-8 sm:p-10 lg:flex-auto">
-              <p className="text-base leading-7 text-gray-600">
-                در تمامی این مدت که کودکان درحال فعالیت و طی کردن مراحل هستند خانواده ی های عزیز میتونن در محیط دلپذیر معاشرت کنند و از آرامش محیط لذت ببرند
-              </p>
-              <p className="mt-6 text-base leading-7 text-gray-600">
-                این برنامه در محیطی باغ ویلا که کاملا امن و دیزاین شده برای کودکان و خانواده است در اطراف تهران برگزار میشود که دارای استخر بزرگ برای شنا و آبتنی کودکان و آموزشهای اولیه شنا به همراه مربی میباشد و کلیه وسایل تفریحی کمپ ِساحلی از جمله چادر ، مبلمان بادی ، اسکله های بادی تفریحی ، اسکوتر دریایی ، آموزش اولیه پدلبرد در استخر و در این محیط برای استفاده کودکان در دسترس است
-              </p>
-            </div>
-            <div className="-mt-2 p-2 lg:mt-0 lg:w-full lg:max-w-md lg:flex-shrink-0">
-              <div className="rounded-2xl bg-gray-50 py-10 text-center ring-1 ring-inset ring-gray-900/5 lg:flex lg:flex-col lg:justify-center lg:py-16">
-                <div className="mx-auto max-w-xs px-4">
-                  <p className="text-base font-semibold text-gray-600">سرمایه گذاری شما برای این سفر یک روزه</p>
-                  <p className="mt-6 flex items-baseline justify-center gap-x-2">
-                    <span className="text-5xl font-bold tracking-tight text-gray-900">۴،۵۰۰،۰۰۰</span>
-                    <span className="text-sm font-semibold leading-6 tracking-wide text-gray-600">تومان</span>
-                  </p>
-                  <p className="mt-4 text-sm text-gray-600">برای  کودک و همراه</p>
-                  
-                  <Link href={"https://wa.me/+989903718447"} className="mt-10 w-fit py-3 px-4 bg-[#0EA64B] rounded-xl flex items-center justify-between gap-x-[10px]">
-                    <WhatsappIcon className="w-[32px] h-[32px]" />
-                    <div className="flex flex-col justify-center items-start gap-y-1">
-                      <p className="text-[16px] leading-[20.8px] text-white font-black" dir="ltr">۰۹۹۰ ۳۷۱ ۸۴۴۷</p>
-                      <p className="text-[12px] leading-[15.6px] text-white">انتقال به واتس اپ | کلیک کنید</p>
-                    </div>
-                    <ChevronLeftCircleIcon className="w-[24px] h-[24px]" />
-                  </Link>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
 

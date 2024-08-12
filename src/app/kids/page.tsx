@@ -202,7 +202,7 @@ export default function Example() {
                     </div>
                   </div>
 
-                  <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+                  <h1 className="text-4xl font-bold  text-gray-900 sm:text-6xl">
                     Kids orienteering
                   </h1>
                   <p className="mt-6 text-lg leading-8 text-gray-600 sm:max-w-md lg:max-w-none">
@@ -213,7 +213,7 @@ export default function Example() {
                     {stats.map((stat) => (
                       <div key={stat.id} className="flex flex-col gap-y-3 border-r border-gray-900/10 pr-6">
                         <dt className="text-sm leading-6 text-gray-600">{stat.name}</dt>
-                        <dd className="order-first text-3xl font-semibold tracking-tight text-gray-900">{stat.value}</dd>
+                        <dd className="order-first text-3xl font-semibold  text-gray-900">{stat.value}</dd>
                       </div>
                     ))}
                   </dl>
@@ -288,7 +288,7 @@ export default function Example() {
               <div className="px-6 lg:px-0 lg:pr-4 lg:pt-4">
                 <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-lg">
                   <h2 className="text-base font-semibold leading-7 text-orange-600">ویژگی‌های تور</h2>
-                  <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">یه سرمایه گذاری همه‌چی تموم</p>
+                  <p className="mt-2 text-3xl font-bold  text-gray-900 sm:text-4xl">یه سرمایه گذاری همه‌چی تموم</p>
                   <p className="mt-6 text-lg leading-8 text-gray-600">
                     در تمامی این مدت که کودکان در حال فعالیت و طی کردن مراحل هستند خانواده‌های عزیز میتونن در محیط دلپذیر معاشرت کنند و از آرامش محیط لذت ببرند
                   </p>
@@ -331,7 +331,7 @@ export default function Example() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8 py-12">
           <div className="mx-auto max-w-2xl lg:text-center">
             <h2 className="text-base font-semibold leading-7 text-orange-600">یک روز به یاد ماندنی</h2>
-            <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+            <p className="mt-2 text-3xl font-bold  text-gray-900 sm:text-4xl">
               پذیرایی شامل
             </p>
           </div>
@@ -367,7 +367,7 @@ export default function Example() {
                 <div className="mx-auto max-w-xs px-4">
                   <p className="text-base font-semibold text-gray-600">سرمایه گذاری شما برای این سفر یک روزه</p>
                   <p className="mt-6 flex items-baseline justify-center gap-x-2">
-                    <span className="text-5xl font-bold tracking-tight text-gray-900">۴،۵۰۰،۰۰۰</span>
+                    <span className="text-5xl font-bold  text-gray-900">۴،۵۰۰،۰۰۰</span>
                     <span className="text-sm font-semibold leading-6 tracking-wide text-gray-600">تومان</span>
                   </p>
                   <p className="mt-4 text-sm text-gray-600">برای  کودک و همراه</p>

@@ -164,7 +164,7 @@ export default function Page() {
                     </div>
                     <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
                         <div className="text-center">
-                            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+                            <h1 className="text-4xl font-bold  text-gray-900 sm:text-6xl">
                                 <span className='font-light text-2xl sm:text-4xl'>مجموعه تفریحات آبی</span> آوِس
                             </h1>
                             <p className="mt-6 text-lg leading-8 text-gray-600">
@@ -204,7 +204,7 @@ export default function Page() {
             <div className="bg-white py-24 sm:py-32">
                 <div className="mx-auto max-w-7xl px-6 lg:px-8">
                     <div className="mx-auto w-full lg:mx-0">
-                        <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">درباره آوِس</h2>
+                        <h2 className="text-3xl font-bold  text-gray-900 sm:text-4xl">درباره آوِس</h2>
                         <p className="mt-2 text-base leading-10 text-gray-600">
                             مجموعه آوِس فعالیت خودش رو از سال ۱۴۰۰ شروع و برای اولین بار کمپ تفریحات آبی پرتابل
                             رو در ایران راه اندازی کرد ، ھدف ما آشنایی
