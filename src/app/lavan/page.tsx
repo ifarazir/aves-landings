@@ -389,67 +389,6 @@ export default function Page() {
           </div>
         </div>
 
-
-        <div className="relative isolate bg-white px-6 py-24 sm:py-32 lg:px-8">
-          <div aria-hidden="true" className="absolute inset-x-0 -top-3 -z-10 transform-gpu overflow-hidden px-36 blur-3xl">
-            <div
-              style={{
-                clipPath:
-                  'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
-              }}
-              className="mx-auto aspect-[1155/678] w-[72.1875rem] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30"
-            />
-          </div>
-          <div className="mx-auto max-w-2xl text-center lg:max-w-4xl">
-            <h2 className="text-base font-semibold leading-7 text-orange-600">هزینه‌ها</h2>
-            <p className="mt-2 text-4xl font-bold text-gray-900 sm:text-5xl">
-              سرمایه گذاری شما برای این سفر
-            </p>
-          </div>
-          <div className="mx-auto mt-16 grid max-w-lg grid-cols-1 items-center gap-y-6 sm:mt-20 sm:gap-y-0 lg:max-w-4xl lg:grid-cols-2">
-            {tiers.map((tier, tierIdx) => (
-              <div
-                key={tier.id}
-                className={clsx(
-                  tier.featured ? 'relative bg-white shadow-2xl' : 'bg-white/60 sm:mx-8 lg:mx-0',
-                  tier.featured
-                    ? ''
-                    : tierIdx === 0
-                      ? 'rounded-t-3xl sm:rounded-b-none lg:rounded-br-3xl lg:rounded-tl-none'
-                      : 'sm:rounded-t-none lg:rounded-br-none lg:rounded-tl-3xl',
-                  'rounded-3xl p-8 ring-1 ring-gray-900/10 sm:p-10',
-                )}
-              >
-                <h3 id={tier.id} className="text-base font-semibold leading-7 text-orange-600">
-                  {tier.name}
-                </h3>
-                <p className="mt-4 flex items-baseline gap-x-2">
-                  <span className="text-5xl font-bold text-gray-900">{tier.priceMonthly}</span>
-                  <span className="text-base text-gray-500">تومان / برای دو نفر</span>
-                </p>
-                <ul role="list" className="mt-8 space-y-3 text-sm leading-6 text-gray-600 sm:mt-10">
-                  {tier.features.map((feature) => (
-                    <li key={feature} className="flex gap-x-3">
-                      <CheckIcon aria-hidden="true" className="h-6 w-5 flex-none text-orange-600" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-
-                <Link href={"https://wa.me/+989903718447"} className="mt-10 w-full py-3 px-4 bg-[#0EA64B] rounded-xl flex items-center justify-between gap-x-[10px]">
-                  <WhatsappIcon className="w-[32px] h-[32px]" />
-                  <div className="flex flex-col justify-center items-start gap-y-1">
-                    <p className="text-[16px] leading-[20.8px] text-white font-black" dir="ltr">۰۹۹۰ ۳۷۱ ۸۴۴۷</p>
-                    <p className="text-[12px] leading-[15.6px] text-white">انتقال به واتس اپ | کلیک کنید</p>
-                  </div>
-                  <ChevronLeftCircleIcon className="w-[24px] h-[24px]" />
-                </Link>
-
-              </div>
-            ))}
-          </div>
-        </div>
-
         <div className="mx-auto max-w-7xl px-6 lg:px-8 py-12">
           <div className="mx-auto max-w-2xl lg:text-center">
             <h2 className="text-base font-semibold leading-7 text-orange-600">یک روز به یاد ماندنی</h2>
@@ -471,6 +410,42 @@ export default function Page() {
               ))}
             </dl>
 
+          </div>
+        </div>
+
+
+        <div className="mx-auto max-w-7xl px-6 lg:px-8 mb-20">
+          <div className="mx-auto mt-16 max-w-2xl rounded-3xl ring-1 ring-gray-200 sm:mt-20 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
+            <div className="p-8 sm:p-10 lg:flex-auto">
+              <p className="text-base leading-7 text-gray-600">
+                این کمپ ورزشی-تفریحی دو نوع چادر داره: چادر VIP و چادر معمولی. چادر VIP که ۳,۲۰۰,۰۰۰ تومنه، یه چادر سرخپوستی سقف بلند همراه با تشک و بالشت بادی و کیسه خوابه. چادر معمولی هم که ۱,۳۰۰,۰۰۰ تومنه، یه چادر کمپینی با زیرانداز و کیسه خواب داره.
+              </p>
+
+              <p className="mt-3 text-base leading-7 text-gray-600">
+                بلیط هواپیما به عسلویه، بندر لنگه یا لامرد به عهده خودتون هست، ولی اگه بخواین، ما می‌تونیم بلیط رو براتون بگیریم. دیدارمون توی بندر مقامه و ترنسفر از فرودگاه به بندر مقام هم با خودتونه. البته اگه بخواین، می‌تونیم ترنسفر اختصاصی با هزینه ۵۵۰,۰۰۰ تومن برای هر نفر براتون جور کنیم. لطفاً موقع ثبت‌نام بگید اگه نیاز به ترنسفر یا بلیط هواپیما دارید. یادتون باشه که ما مسئولیتی در قبال کنسلی یا تأخیر پروازها نداریم، حتی اگه بلیط رو ما براتون گرفته باشیم.
+              </p>
+            </div>
+            <div className="-mt-2 p-2 lg:mt-0 lg:w-full lg:max-w-md lg:flex-shrink-0">
+              <div className="rounded-2xl bg-gray-50 py-10 text-center ring-1 ring-inset ring-gray-900/5 lg:flex lg:flex-col lg:justify-center lg:py-16">
+                <div className="mx-auto max-w-xs px-4">
+                  <p className="text-base font-semibold text-gray-600">سرمایه گذاری شما برای این سفر</p>
+                  <p className="mt-6 flex items-baseline justify-center gap-x-2">
+                    <span className="text-5xl font-bold  text-gray-900">۱۳،۸۰۰،۰۰۰</span>
+                    <span className="text-sm font-semibold leading-6 tracking-wide text-gray-600">تومان</span>
+                  </p>
+                  <p className="mt-4 text-sm text-gray-600">برای دو نفر (بدون احتساب هزینه چادر)</p>
+
+                  <Link href={"https://wa.me/+989903718447"} className="mt-10 w-fit py-3 px-4 bg-[#0EA64B] rounded-xl flex items-center justify-between gap-x-[10px]">
+                    <WhatsappIcon className="w-[32px] h-[32px]" />
+                    <div className="flex flex-col justify-center items-start gap-y-1">
+                      <p className="text-[16px] leading-[20.8px] text-white font-black" dir="ltr">۰۹۹۰ ۳۷۱ ۸۴۴۷</p>
+                      <p className="text-[12px] leading-[15.6px] text-white">انتقال به واتس اپ | کلیک کنید</p>
+                    </div>
+                    <ChevronLeftCircleIcon className="w-[24px] h-[24px]" />
+                  </Link>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
