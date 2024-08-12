@@ -31,6 +31,18 @@ import { IconlyMeat } from "../icons/Iconly-Meat-Icon";
 import { IconlyPizza } from "../icons/Iconly-Pizza-Icon";
 import { IconlySoap } from "../icons/Iconly-Soap-Icon";
 import clsx from "clsx";
+import { IconlySlippers2 } from "../icons/Iconly-Slippers-2-Icon";
+import { Iconlyboat2 } from "../icons/Iconly-boat-2-Icon";
+import { IconlyCameravideo } from "../icons/Iconly-Camera-video-Icon";
+import { IconlyCablecontroller } from "../icons/Iconly-Cable-controller-Icon";
+import { IconlyShower } from "../icons/Iconly-Shower-Icon";
+import { IconlyToilet2 } from "../icons/Iconly-Toilet-2-Icon";
+import { IconlyPoweradapterchargeoutput } from "../icons/Iconly-Power-adapter-charge-output-Icon";
+import { IconlySofa2 } from "../icons/Iconly-Sofa-2-Icon";
+import { Iconlyballvolleyball } from "../icons/Iconly-ball-volleyball-Icon";
+import { IconlyballBasketball } from "../icons/Iconly-ball-Basketball-Icon";
+import { IconlyballFootball1 } from "../icons/Iconly-ball-Football-1-Icon";
+import { IconlyShip } from "../icons/Iconly-ship-Icon";
 
 const navigation = [
   { name: 'Lady\'s Day', href: '/ladies' },
@@ -60,67 +72,67 @@ const features = [
 const featuresEntertainments = [
   {
     name: 'پدل بورد',
-    icon: IconlyCake,
+    icon: IconlySlippers2,
   },
   {
     name: 'کایاک دو نفره',
-    icon: IconlyColdDrink,
+    icon: Iconlyboat2,
   },
   {
     name: 'اسنورکلینگ',
-    icon: IconlyApple,
+    icon: IconlySlippers2,
   },
   {
     name: 'اسکله درایی',
-    icon: IconlyApple,
+    icon: IconlySlippers2,
   },
   {
     name: <>اسکوتر دریایی <span className="text-xs text-gray-500 block mt-1 font-normal">از قبل باید رزرو شود</span></>,
-    icon: IconlyApple,
+    icon: IconlySlippers2,
   },
   {
     name: 'سینما در ساحل',
-    icon: IconlyApple,
+    icon: IconlyCameravideo,
   },
   {
     name: 'پلی‌استیشن',
-    icon: IconlyApple,
+    icon: IconlyCablecontroller,
   },
   {
     name: 'چادر دوش',
-    icon: IconlyApple,
+    icon: IconlyShower,
   },
   {
     name: <>چادر دستشویی <span className="text-xs text-gray-500 block mt-1 font-normal">به همراه شستشویی برقی و لوازم بهداشتی</span></>,
-    icon: IconlyApple,
+    icon: IconlyToilet2,
   },
   {
     name: 'تامین برق کمپ در طول روز',
-    icon: IconlyApple,
+    icon: IconlyPoweradapterchargeoutput,
   },
   {
     name: 'مبلمان بادی و دیزاین ساحل',
-    icon: IconlyApple,
+    icon: IconlySofa2,
   },
   {
     name: 'والیبال ساحلی',
-    icon: IconlyApple,
+    icon: Iconlyballvolleyball,
   },
   {
     name: 'واتر پلو',
-    icon: IconlyApple,
+    icon: IconlyballBasketball,
   },
   {
     name: 'فوتبال ساحلی',
-    icon: IconlyApple,
+    icon: IconlyballFootball1,
   },
   {
     name: 'لوازم بادی برای بازی ساحلی',
-    icon: IconlyApple,
+    icon: IconlySlippers2,
   },
   {
     name: 'ترنسفر های دریایی',
-    icon: IconlyApple,
+    icon: IconlyShip,
   },
 ]
 
@@ -447,8 +459,8 @@ export default function Page() {
           </div>
           <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
             <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
-              {featuresEntertainments.map((feature) => (
-                <div key={feature.name} className="flex flex-col items-center justify-start">
+              {featuresEntertainments.map((feature, index) => (
+                <div key={index} className="flex flex-col items-center justify-start">
                   <dt className="text-xl font-semibold leading-7 text-gray-900 text-center">
                     <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-lg bg-orange-600">
                       <feature.icon aria-hidden="true" className="h-8 w-8 text-white" />
