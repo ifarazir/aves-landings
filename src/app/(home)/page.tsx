@@ -11,10 +11,10 @@ import { PhoneIcon } from '@heroicons/react/24/outline'
 import { IconlyCall } from '../icons/Iconly-Call-Icon'
 import { useRouter } from 'next/navigation'
 
-const navigation = [
+export const navigation = [
     { name: 'Lady\'s Day', href: '/ladies' },
     { name: 'Kids Orienteering', href: '/kids' },
-    { name: 'کمپ ساحلی جزیره لاوان', href: '#' },
+    { name: 'کمپ ساحلی جزیره لاوان', href: '/lavan' },
 ]
 
 const posts = [
@@ -41,10 +41,10 @@ const posts = [
     {
         id: 3,
         title: 'کمپ ساحلی جزیره لاوان',
-        href: '/kids',
-        image: './images/IMG_6279-min.jpg',
+        href: '/lavan',
+        image: './images/lavan/IMG_1924.jpg',
         description:
-            'شب و ٣ روز کمپ ساحلی و چادر مانی در جزیره لاوان ٢ به همراه تمامی وعده ھای غذایی',
+            '۳ شب و ۲  روز کمپ ساحلی و چادرمانی در جزیره لاوان به همراه تمامی وعده‌های غذایی',
         date: '۲ شب و ۳ روز',
     },
 ]

@@ -73,7 +73,7 @@ const featuresFood = [
   },
 ]
 
-export default function Example() {
+export default function Page() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   const router = useRouter();
@@ -237,7 +237,7 @@ export default function Example() {
                     <div className="relative">
                       <img
                         alt=""
-                        src="./images/kids/IMG_4980.jpg"
+                        src="./images/lavan/IMG_4980.jpg"
                         className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
                       />
                       <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
@@ -374,7 +374,7 @@ export default function Example() {
                     <span className="text-sm font-semibold leading-6 tracking-wide text-gray-600">تومان</span>
                   </p>
                   <p className="mt-4 text-sm text-gray-600">برای  کودک و همراه</p>
-
+                  
                   <Link href={"https://wa.me/+989903718447"} className="mt-10 w-fit py-3 px-4 bg-[#0EA64B] rounded-xl flex items-center justify-between gap-x-[10px]">
                     <WhatsappIcon className="w-[32px] h-[32px]" />
                     <div className="flex flex-col justify-center items-start gap-y-1">
